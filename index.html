@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>PMO Tools</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="images/favicon.ico" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-text">PMO Tools</div>
+            
+            <!--//TODO: Add Image for Header -->
+            <div class="logo-image">Image Goes</div>
+        </div>
+        <div class="nav">
+
+            <ul>
+                <li><a href="#projects">Projects</a>
+                </li>
+                <li><a href="#project-details">Project Details</a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="app">
+   <div class="projects-css">
+
+    <h1>Projects</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Program</th>
+                <th>Project Name</th>
+                <th>Project Manager</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>Marketings</td>
+                <td>Promo Website</td>
+                <td>Joe Jackson</td>
+                <td>Active</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+        </div>
+    </div>
+   
+
+    <!--Application-Templates-->
+    <script id="projects-template" type="render/template">
+    <div class="projects-css">
+
+    <h1>Projects</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>{{Program}}</th>
+                <th>{{Project Name}}</th>
+                <th>{{Project Manager}}</th>
+                <th>{{Status}}</th>
+            </tr>
+            <tr>
+                <td>{{Marketings}}</td>
+                <td>{{Promo Website}}</td>
+                <td>{{Joe Jackson}}</td>
+                <td>{{Active}}</td>
+            </tr>
+
+        </tbody>
+    </table></div>
+    </script>
+
+</body>
+
+</html>

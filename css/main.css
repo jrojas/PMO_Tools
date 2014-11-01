@@ -1,0 +1,60 @@
+@import url("reset.css");
+
+/* body */
+
+.container {
+    width: 1024px;
+    margin: 0 auto;
+    background: #fff;
+}
+body {
+    background: #ebedee;
+}
+/*Header*/
+
+.header {
+    height: 50px;
+    background: #1B53AF;
+    color: #fff;
+}
+.nav {
+    height: 30px;
+    background: #082F70;
+}
+.nav ul {
+    display: inline;
+    list-style-type: none;
+}
+.nav ul li {
+    padding-right: 10px;
+    margin: 0 auto;
+    display: inline;
+}
+.nav ul li a {
+    color: #fff;
+    position: relative;
+    line-height: 30px;
+    text-decoration: none
+}
+.nav a:hover {
+    text-decoration: underline;
+}
+/* Projects Styles*/
+
+.projects-css {
+    padding: 5px 5px 5px 5px;
+}
+/* Table Styles*/
+
+table {
+    width: 100%;
+}
+table th {
+    color: #ffffff;
+    background-color: #555555;
+    border: 1px solid #555555;
+    padding: 3px;
+    vertical-align: top;
+    text-align: left;
+    w
+    /* End Projects Styles*/

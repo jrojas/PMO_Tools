@@ -28,6 +28,12 @@ var Core =(function($,window,undefined){
         
            
       }; 
+	
+	var append = function(el,temp){
+	
+		$(el).append(temp);
+		
+	}
     
     var bind = function(el,evt,fn){
         $(el).on(evt,fn);
@@ -56,6 +62,64 @@ var Core =(function($,window,undefined){
         publish: pub,
         subscribe: sub,
         init: init,
+		append: append
      };
     
 }(jQuery,window));
+
+
+var Router = (function () {
+
+	var routes = [{
+			hash: '#projects',
+			presenter: 'ListProjectsPresenter'
+        },
+		{
+			hash: '#project-details',
+			presenter: 'AddProjectDetailsPresenter'
+        }];
+	
+	var defaultRoute = '#projects';
+	var currentHash = '';
+
+	var startRouting = function () {
+		window.location.hash = window.location.hash || defaultRoute;
+		setInterval(hashCheck, 100);
+	}
+
+
+	var hashCheck = function () {
+		if (window.location.hash != currentHash) {
+			for (var i = 0, currentRoute; currentRoute = routes[i++];) {
+				if (window.location.hash == currentRoute.hash)
+					loadPresenter(currentRoute);
+			}
+			currentHash = window.location.hash;
+		}
+	}
+
+	var loadPresenter = function (presenter) {
+
+		var LP = "ListProjectsPresenter"
+		var AP = "AddProjectDetailsPresenter"
+
+		if (LP === presenter.presenter) {
+
+			ListProjectsPresenter.init();
+		}
+
+		if (AP === presenter.presenter)
+
+			AddProjectDetailsPresenter.init();
+
+
+
+	}
+
+
+
+
+	return {
+		startRouting: startRouting
+	};
+})();

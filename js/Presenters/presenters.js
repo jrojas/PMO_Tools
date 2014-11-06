@@ -8,7 +8,7 @@ var ListProjectsPresenter =(function(){
 		
 		 var projects = Models.init();
 		
-         ListProjectsView.init({projects:projects});
+        ListProjectsView.init({projects:projects});
 		
 			 
     };
@@ -25,6 +25,7 @@ var ListProjectsPresenter =(function(){
 var AddProjectDetailsPresenter =(function(){
 var init = function(){
 	AddProjectDetailsView.init("Add-Project");
+	
 
 };
 

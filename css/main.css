@@ -69,6 +69,7 @@ table th {
 					box-shadow:0px 0px #000000;
 					width:100%;
 				}
+				
 
 				th
 				{
@@ -79,14 +80,16 @@ table th {
 					border-color:#2C4F85;
 					font-weight:bold;
 					padding:5px;
-					text-align:center;
+					text-align:left;
 					vertical-align:top;
+					width: 255px;
 				}
 
 				tr
 				{
 					color:#000000;
 					font-weight:normal;
+					
 				}
 
 				tr:hover td
@@ -100,6 +103,7 @@ table th {
 					padding:3px 5px;
 					text-align:left;
 					vertical-align:top;
+					width: 255px;
 				}
 /*	</style>*/
     /* End Projects Styles*/

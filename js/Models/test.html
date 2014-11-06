@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+	<style>
+		table
+				{
+					border-spacing:1px;
+					border-style:solid;
+					border-width:2px;
+					border-color:#2C4F85;
+					font:14px Georgia, serif;
+					padding:0;
+					box-shadow:0px 0px #000000;
+				}
+
+				th
+				{
+					color:#FFFFFF;
+					background:#1B53AF;
+					border-style:solid;
+					border-width:1px;
+					border-color:#2C4F85;
+					font-weight:bold;
+					padding:5px;
+					text-align:center;
+					vertical-align:top;
+				}
+
+				tr
+				{
+					color:#000000;
+					font-weight:normal;
+				}
+
+				tr:hover td
+				{
+					background:#EBF2FF;
+					color:#081C6B;
+				}
+
+				td
+				{
+					padding:3px 5px;
+					text-align:left;
+					vertical-align:top;
+				}
+	</style>
+</head>
+	<table>
+		<tbody id="body">
+				<tr>
+					<th>Program</th>
+					<th>Project Name</th>
+					<th>Project Manager</th>
+					<th>Status</th>
+				</tr>
+				
+
+			</tbody>
+	</table>
+<body>
+	
+	
+	<script id="projects-template" type="render/template">
+				<tr>
+					
+					<td>{{Program}}</td>
+					<td>{{Project Name}}</td>
+					<td>{{Project Manager}}</td>
+					<td>{{Status}}</td>
+				</tr>
+				 </script>
+
+	<script>
+		
+		var getProjects = function(){
+				
+				
+		var projects = [
+			
+			{
+			id: 1,
+			programname: "Marketing",
+			projectname: "Website Enhancement",
+			projectmanager: "Jorge Rojas",
+			status: "Active"
+			},
+			{
+			id: 2,
+			programname: "Sales",
+			projectname: "Website Deployment",
+			projectmanager: "Jorge Rojas",
+			status: "Active"
+			}
+					   ]
+		
+		// Get a reference to our posts
+		
+		
+		renderView(projects);
+		
+    	
+		
+	};
+		
+		var renderView = function(projects){
+		console.log(projects.projects);
+		
+		
+		var template = document.getElementById("projects-template").innerHTML;
+		for (var i = 0, len = projects.length; i < len; i++) {
+		var app = document.getElementById("body");	
+		
+	
+			var temp = template.replace(/{{Program}}/ig, projects[i].programname)
+				.replace(/{{Project Name}}/ig, projects[i].projectname)
+				.replace(/{{Project Manager}}/ig, projects[i].projectmanager)
+				.replace(/{{Status}}/ig, projects[i].status);
+			
+			
+		
+			app.innerHTML +=temp;
+			 
+		}
+		
+		
+		}
+		
+		
+		//init
+		getProjects();
+	
+	</script>
+
+</body>
+	
+	
+
+	
+	
+</html>

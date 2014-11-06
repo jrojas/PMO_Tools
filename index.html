@@ -6,7 +6,7 @@
     <title>PMO Tools</title>
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="images/favicon.ico" />
-	<script src='https://cdn.firebase.com/js/client/1.1.1/firebase.js'></script>
+	
 </head>
 
 <body>
@@ -28,28 +28,41 @@
         </div>
 		<h1>Projects</h1>
         <div id="app">
-  			<table id="app-tbody">
-		<tbody>
-				<tr>
-					<th>Program</th>
-					<th>Project Name</th>
-					<th>Project Manager</th>
-					<th>Status</th>
-				</tr>
-				
+  			<script id="projects-template" type="render/template">
+				<table>
+				<tbody>
+						<tr>
+							<th>Program</th>
+							<th>Project Name</th>
+							<th>Project Manager</th>
+							<th>Status</th>
+						</tr>
 
-			</tbody>
-	</table>
+
+
+									<tr>
+									<td>{{Program}}</td>
+									<td>{{Project Name}}</td>
+									<td>{{Project Manager}}</td>
+									<td>{{Status}}</td>
+									</tr>
+
+
+
+
+
+					</tbody>
+			</table>
+	</script>
+			<script id="add-template" type="render/template">
+				<label>{{Project Name}}</label>	<input>
+			</script>
 
         </div>
     </div>
-   <script id="projects-template" type="render/template">
-				<tr>
-					<td>{{Program}}</td>
-					<td>{{Project Name}}</td>
-					<td>{{Project Manager}}</td>
-					<td>{{Status}}</td>
-				</tr>
+   
+					
+	
 
 	
     </script>

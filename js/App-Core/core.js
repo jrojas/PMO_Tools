@@ -30,7 +30,7 @@ var Core =(function($,window,undefined){
       }; 
 	
 	var append = function(el,temp){
-	
+		
 		$(el).append(temp);
 		
 	}
@@ -93,31 +93,22 @@ var Router = (function () {
 			for (var i = 0, currentRoute; currentRoute = routes[i++];) {
 				if (window.location.hash == currentRoute.hash)
 					loadPresenter(currentRoute);
+				
+				
+					
+				
 			}
 			currentHash = window.location.hash;
 		}
 	}
 
 	var loadPresenter = function (presenter) {
+		var pre=eval(presenter.presenter);
+		pre.init();
 
-		var LP = "ListProjectsPresenter"
-		var AP = "AddProjectDetailsPresenter"
-
-		if (LP === presenter.presenter) {
-
-			ListProjectsPresenter.init();
-		}
-
-		if (AP === presenter.presenter)
-
-			AddProjectDetailsPresenter.init();
-
-
+	
 
 	}
-
-
-
 
 	return {
 		startRouting: startRouting

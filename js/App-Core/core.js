@@ -4,7 +4,7 @@ var Core =(function($,window,undefined){
     
     //Finds DOM elements for caching   
     
-    var init =function (){
+   var init =function (){
     };
   
     var findSelector = function(selector, context){

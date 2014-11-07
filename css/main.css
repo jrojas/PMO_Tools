@@ -1,12 +1,54 @@
 @import url("reset.css");
 
+/*Header*/
+.logo-text {
+
+
+
+    font-family: droid-sans;
+    font-size: 40px;
+    padding: 5px 5px 5px 5px;
+    float: left;
+    
+
+}
+
+h1{
+
+    font-size: 30px;
+    padding: 5px 5px 5px 5px;
+
+}
+
+
+.logo-image{
+
+    
+    
+    background: url(/images/lock.jpg) no-repeat;
+float: right;
+width: 118px;
+height: 50px;
+}
+
+.
+
+
+/*End - Header*/
+
+
 /* body */
+.clear{
+
+clear: both;
+}
 
 .container {
     width: 1024px;
     margin: 0 auto;
     background: #fff;
 }
+
 body {
     background: #ebedee;
 }
@@ -17,25 +59,38 @@ body {
     background: #1B53AF;
     color: #fff;
 }
+
 .nav {
     height: 30px;
     background: #082F70;
 }
+
 .nav ul {
     display: inline;
     list-style-type: none;
 }
+
+
+
+
 .nav ul li {
-    padding-right: 10px;
-    margin: 0 auto;
-    display: inline;
+padding: 5px 5px 6px 7px;
+margin: 0 0 0 5px;
+display: inline;
 }
+li:hover {
+background: rgb(34, 152, 255);
+}
+
+
+
 .nav ul li a {
     color: #fff;
     position: relative;
     line-height: 30px;
     text-decoration: none
 }
+
 .nav a:hover {
     text-decoration: underline;
 }
@@ -56,54 +111,54 @@ table th {
     padding: 3px;
     vertical-align: top;
     text-align: left;*/
-    
+
 /*		<style>*/
-		table
-				{
-					border-spacing:1px;
-					border-style:solid;
-					border-width:2px;
-					border-color:#2C4F85;
-					font:14px Georgia, serif;
-					padding:0;
-					box-shadow:0px 0px #000000;
-					width:100%;
-				}
-				
 
-				th
-				{
-					color:#FFFFFF;
-					background:#1B53AF;
-					border-style:solid;
-					border-width:1px;
-					border-color:#2C4F85;
-					font-weight:bold;
-					padding:5px;
-					text-align:left;
-					vertical-align:top;
-					width: 255px;
-				}
+table {
+    border-spacing: 1px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #2C4F85;
+    font: 14px Georgia, serif;
+    padding: 5px 5px 5px 5px;
+    box-shadow: 0px 0px #000000;
+    width: 1014px;
+    margin: 0 auto;
+    
+    
+}
 
-				tr
-				{
-					color:#000000;
-					font-weight:normal;
-					
-				}
+th {
+    color: #FFFFFF;
+    background: #1B53AF;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #2C4F85;
+    font-weight: bold;
+    padding: 5px;
+    text-align: left;
+    vertical-align: top;
+    width: 255px;
+}
 
-				tr:hover td
-				{
-					background:#EBF2FF;
-					color:#081C6B;
-				}
+tr {
+    color: #000000;
+    font-weight: normal;
+}
 
-				td
-				{
-					padding:3px 5px;
-					text-align:left;
-					vertical-align:top;
-					width: 255px;
-				}
+tr:hover td {
+    background: #EBF2FF;
+    color: #081C6B;
+}
+
+td {
+    padding: 3px 5px;
+    text-align: left;
+    vertical-align: top;
+    width: 255px;
+}
+
+
 /*	</style>*/
-    /* End Projects Styles*/
+
+/* End Projects Styles*/

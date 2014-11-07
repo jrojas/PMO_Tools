@@ -73,11 +73,14 @@ var Router = (function () {
 	var routes = [{
 			hash: '#projects',
 			presenter: 'ListProjectsPresenter'
-        },
-		{
+            },
+		      {
 			hash: '#project-details',
 			presenter: 'AddProjectDetailsPresenter'
-        }];
+                }];
+    
+   
+    
 	
 	var defaultRoute = '#projects';
 	var currentHash = '';

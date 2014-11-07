@@ -1,4 +1,4 @@
-var Router = (function () {
+/*var Routersxys = (function () {
 
 	var routes = [{
 			hash: '#projects',
@@ -51,4 +51,4 @@ var Router = (function () {
 	return {
 		startRouting: startRouting
 	};
-})(AddPresenter, ListPresenter);
+})(AddPresenter, ListPresenter);*/

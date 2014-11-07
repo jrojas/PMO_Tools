@@ -6,6 +6,15 @@ var Main =(function(){
     
     var init =function (){
 		
+        var routes = [{
+			hash: '#projects',
+			presenter: 'ListProjectsPresenter'
+        },
+		{
+			hash: '#project-details',
+			presenter: 'AddProjectDetailsPresenter'
+        }];
+      
 		Router.startRouting();
 		
 		

@@ -6,70 +6,94 @@
     <title>PMO Tools</title>
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="images/favicon.ico" />
+    <script src="http://use.edgefonts.net/droid-sans:n4,n7:all.js"></script>
 	
 </head>
 
 <body>
     <div class="container">
+        <div id="content">
+        
+        
+        
         <div class="header">
             <div class="logo-text">PMO Tools</div>
             
             <!--//TODO: Add Image for Header -->
-            <div class="logo-image">Image Goes</div>
+            <div class="logo-image"></div>
+        
         </div>
+        <div class="clear"></div>
         <div class="nav">
 
             <ul>
-                <li><a href="#projects">Projects</a>
+                <li><a href="/#dashboard">Dashboard</a>
                 </li>
-                <li><a href="#project-details">Project Details</a>
+                <li><a href="/#projects">Projects</a>
+                </li>
+                <li><a href="/#project-details">Project Details</a>
+                </li>
+                <li><a href="/#manage-user">Manage User</a>
+                </li>
+                 <li><a href="/#reports">Reports</a>
+                </li>
+                 <li><a href="/#user-guide">User Guide</a>
                 </li>
             </ul>
         </div>
 		<h1>Projects</h1>
-		
-        <div id="app">
-			
-  			<script id="projects-template" type="render/template">
-				<table>
-				<tbody>
-						<tr>
+		  
+        
+        
+            
+            <div id="app">
+            
+            
+           
+
+            <script id="projects-template" type="render/template">
+                            <table>
+
+                                    <thead>
 							<th>Program</th>
 							<th>Project Name</th>
 							<th>Project Manager</th>
 							<th>Status</th>
-						</tr>
+                            
+                        <thead>
+                                    <tbody>
+
+                                                <tr>
+                                                <td>{{Program}}</td>
+                                                <td>{{Project Name}}</td>
+                                                <td>{{Project Manager}}</td>
+                                                <td>{{Status}}</td>
+                                                </tr>
 
 
 
-									<tr>
-									<td>{{Program}}</td>
-									<td>{{Project Name}}</td>
-									<td>{{Project Manager}}</td>
-									<td>{{Status}}</td>
-									</tr>
 
 
+                                </tbody>
+                        </table>
+                </script>
 
 
-
-					</tbody>
-			</table>
-	</script>
-			
-			
-			<script id="add-template" type="render/template">
-				<label>{{Project Name}}</label>	<input>
-			</script>
+            <script id="add-template" type="render/template">
+                            <label>{{Project Name}}</label>	<input>
+                        </script>
 
         </div>
+        
+        </div>
+        
     </div>
    
 					
 	
 
 	
-    </script>
+  
 
     <script src="js/App-Core/lib/jquery.js"></script>
 	<script src="js/App-Core/core.js"></script>

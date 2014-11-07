@@ -6,6 +6,7 @@ var DOMElements = {
 	app : document.getElementById('app'),
 	vtemplate : document.getElementById('projects-template').innerHTML,
 	atemplate: document.getElementById('add-template').innerHTML
+   
 
 }
 
@@ -17,6 +18,8 @@ var ListProjectsView = (function (){
 		var proj = parameters.projects;
 		var vtemplate = DOMElements.vtemplate;
 		var app = DOMElements.app;
+        
+        
 		var temp='';
 		
 		for (var i = 0, len = proj.length; i < len; i++) {
@@ -27,8 +30,18 @@ var ListProjectsView = (function (){
 				.replace(/{{Status}}/ig, proj[i].status);
 			
 		}
+        
+       
+        app.innerHTML=temp;
+        
 	}
-		app.innerHTML=temp;
+		
+    
+    
+    return {
+
+		init: init
+	};
 
 }());
 
@@ -36,15 +49,18 @@ var AddProjectDetailsView = (function () {
 	
 	
 	var init = function (parameters) {
-		var atemplate = DOMElements.atemplate
-		var app = DOMElements.app	
+		var atemplate = DOMElements.atemplate;
+		var app = DOMElements.app;
+       
 		var temp =	atemplate.replace(/{{Project Name}}/ig, parameters);
+       
 		app.innerHTML=temp;
 		
 
 
 	}
-	return {
+	
+    return {
 
 		init: init
 	};

@@ -5,8 +5,9 @@ var Main =(function(){
     
     
     var init =function (){
-		//ListProjectsPresenter.init();
+		
 		Router.startRouting();
+		
 		
     };
   

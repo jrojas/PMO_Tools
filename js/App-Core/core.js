@@ -106,13 +106,16 @@ var Router = (function () {
 	}
 
 	var loadPresenter = function (presenter) {
-var pre=eval(presenter.presenter);
-	pre.init();
 
+		
+		//var pre=eval(presenter.presenter);
+		//pre.init();
 
-
-
-
+		var pre = presenter.presenter;
+		pre = window[function_name];
+		pre.init();
+		
+		
 }
 
 	return {

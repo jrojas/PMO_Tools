@@ -4,8 +4,8 @@ var DOMElements = {
 	
 	
 	app : document.getElementById('app'),
-	vtemplate : document.getElementById('projects-template').innerHTML,
-	atemplate: document.getElementById('add-template').innerHTML
+	vtemplate : document.getElementById('projects-template').innerHTML.trim(),
+	atemplate: document.getElementById('add-template').innerHTML.trim()
    
 
 }
@@ -21,18 +21,20 @@ var ListProjectsView = (function (){
         
         
 		var temp='';
-		
-		for (var i = 0, len = proj.length; i < len; i++) {
+	
+
+		for  (var i = 0, len = proj.length; i < len; i++) {
 			
 			 temp += vtemplate.replace(/{{Program}}/ig, proj[i].programname)
 				.replace(/{{Project Name}}/ig, proj[i].projectname)
 				.replace(/{{Project Manager}}/ig, proj[i].projectmanager)
-				.replace(/{{Status}}/ig, proj[i].status);
+				.replace(/{{Status}}/ig, proj[i].status)
+	
 			
 		}
-        
        
         app.innerHTML=temp;
+		
         
 	}
 		
